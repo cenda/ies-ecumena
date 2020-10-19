@@ -1,13 +1,169 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+/*@import "http://ies.local/wp-content/themes/ies/css/style.css";*/
+@import "~react-date-picker/dist/DatePicker.css";
+
+.select-date {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 30px;
+}
+.select-date strong {
+    margin-right: 10px;
+}
+.react-date-picker .react-date-picker__wrapper {
+    border-radius: 4px;
+    border-color: #167C80;
+    color: #167C80;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
+.react-date-picker__calendar .react-calendar {
+    border-color: #167C80;
+    margin-top: 4px;
+    border-radius: 4px;
+}
+.react-date-picker__calendar .react-calendar__navigation {
+    background: rgba(22, 124, 128, 0.15);
+    margin-bottom: 0;
+    padding: 0 8px;
+}
+.react-date-picker__calendar .react-calendar__viewContainer {
+    background: rgba(22, 124, 128, 0.025);
+    padding: 10px 5px 5px;
+}
+.react-date-picker__calendar .react-calendar__navigation button {
+    margin: 5px 2px;
+    border-radius: 4px;
+    transition: all .2s;
+    font-size: 16px;
+    line-height: 1;
+    min-width: unset;
+    padding: 0 10px;
+}
+.react-date-picker__calendar .react-calendar__navigation button:enabled:hover,
+.react-calendar__tile.react-calendar__tile--hasActive {
+    background: #167C80;
+    color: white;
+}
+.react-calendar__tile {
+    font-size: 14px;
+}
+
+.react-date-picker .react-date-picker__inputGroup {
+    padding: 10px 0 10px 15px;
+    cursor: pointer;
+}
+.react-date-picker__inputGroup input[type],
+button.react-date-picker__calendar-button {
+    outline: none;
+}
+.react-date-picker__inputGroup input[type] {
+    border: 0;
+    padding: 0 1px;
+    color: #167C80;
+}
+.react-date-picker__inputGroup input[type]::selection {
+    background: transparent;
+    color: #167C80;
+}
+.react-date-picker__inputGroup input[type]::-moz-selection {
+    background: transparent;
+    color: #167C80;
+}
+
+.react-date-picker__inputGroup__divider {
+    pointer-events: none;
+    padding: 0;
+}
+
+button.react-date-picker__calendar-button {
+    color: #167C80;
+    transition: all .2s;
+    padding-right: 15px;
+}
+button.react-date-picker__calendar-button:hover {
+    color: #126063
+}
+
+button.react-calendar__tile {
+    border-radius: 4px;
+}
+button.react-calendar__tile--now,
+button.react-calendar__tile--active {
+    font-weight: 700;
+}
+button.react-calendar__tile--now {
+    background: rgba(22, 124, 128, 0.15);
+}
+
+button.react-calendar__tile--active,
+button.react-calendar__tile:enabled:hover {
+    background: #167C80;
+    color: #fff;
+}
+
+button.react-calendar__month-view__days__day--weekend {
+    color: #167C80;
+    font-weight: bold;
+}
+button.react-calendar__month-view__days__day--weekend.react-calendar__tile--active {
+    color: #fff
+}
+
+.react-calendar abbr {
+    border: none;
+    cursor: inherit;
+}
+
+
+
+.loader,
+.loader:after {
+    border-radius: 50%;
+    width: 10em;
+    height: 10em;
+}
+.loader {
+    margin: 60px auto;
+    font-size: 10px;
+    position: relative;
+    text-indent: -9999em;
+    border-top: 1.1em solid rgba(252,227,131, 0.2);
+    border-right: 1.1em solid rgba(252,227,131, 0.2);
+    border-bottom: 1.1em solid rgba(252,227,131, 0.2);
+    border-left: 1.1em solid #fce383;
+    -webkit-transform: translateZ(0);
+    -ms-transform: translateZ(0);
+    transform: translateZ(0);
+    -webkit-animation: load8 1.1s infinite linear;
+    animation: load8 1.1s infinite linear;
+}
+@-webkit-keyframes load8 {
+    0% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    100% {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+@keyframes load8 {
+    0% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    100% {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+
+
+.loading-placeholder {
+    text-align: center;
+}
+
+.error--no-text {
+    text-align: center;
+    font-size: 22px;
 }
