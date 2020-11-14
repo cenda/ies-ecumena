@@ -15,7 +15,7 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build && yarn run copy_js && yarn run copy_css",
+    "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "copy_js": "cp build/static/js/2.*.chunk.js ../wordpress/wp-content/themes/ies/js/2.chunk.js && cp build/static/js/main.*.chunk.js ../wordpress/wp-content/themes/ies/js/main.chunk.js && cp build/static/js/runtime~main.*.js ../wordpress/wp-content/themes/ies/js/runtime~main.js",

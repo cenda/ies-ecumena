@@ -160,9 +160,9 @@ class DatepickerComponent extends Component {
             // FETCH FOR CALENDARIUM:
             `${process.env.NODE_ENV !== 'production' ? 'http://ies.local' : process.env.REACT_APP_WEB_URL}/wp-json/wp/v2/lect_calendarium?slug=${appliedCalendariumSlug}`,
             // FETCH FOR DAY TEXTS
-            `${process.env.NODE_ENV !== 'production' ? 'http://ies.local' : process.env.REACT_APP_WEB_URL}/wp-json/wp/v2/lect_days?filter[meta_key]=day_name&filter[meta_compare]=LIKE&filter[meta_value]=${encodeURIComponent(dayName)}`,
+            `${process.env.NODE_ENV !== 'production' ? 'http://ies.local' : process.env.REACT_APP_WEB_URL}/wp-json/wp/v2/lect_days?filter[meta_key]=day_name&filter[meta_compare]=LIKE&per_page=100&filter[meta_value]=${encodeURIComponent(dayName)}`,
             // FETCH FOR DAY NOTES
-            `${process.env.NODE_ENV !== 'production' ? 'http://ies.local' : process.env.REACT_APP_WEB_URL}/wp-json/wp/v2/lect_days_notes?filter[meta_key]=day_name&filter[meta_compare]=LIKE&filter[meta_value]=${encodeURIComponent(dayName)}`,
+            `${process.env.NODE_ENV !== 'production' ? 'http://ies.local' : process.env.REACT_APP_WEB_URL}/wp-json/wp/v2/lect_days_notes?filter[meta_key]=day_name&filter[meta_compare]=LIKE&per_page=100&filter[meta_value]=${encodeURIComponent(dayName)}`,
         ];
         const allRequests = urls.map(url => fetch(url, {
             ...requestOptions
